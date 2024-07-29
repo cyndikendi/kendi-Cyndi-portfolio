@@ -75,6 +75,25 @@ display: inline-flex;
     text-decoration: none;
     padding: 0.3rem 1rem;
 }
+.cards{
+  height: 30px;
+  border-radius: 30px; 
+  padding: 8px 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards:hover{
+border-radius: 100px; 
+padding: 8px 8px;
+margin-left: auto;
+margin-right: auto;
+cursor: grabbing;
+transition: .5s ease;
+transform: translate(5%, 8%);
+-ms-transform: translate(5%, 5%);
+text-align: center;
+text-transform: uppercase;
+}
 </style>
 <body>
     <nav class="navbar">
@@ -92,7 +111,8 @@ display: inline-flex;
     </div>
 </div>
 </nav>
-<p>Reach me via:</p>
+<h3>Reach me via:</h3>
+<div class="cards">
 <ul class="list-group list-group-horizontal-xl">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li class="list-group-item">
         <a href="https://github.com/cyndikendi">Github</a>
@@ -111,5 +131,6 @@ display: inline-flex;
 <img src="whatsappIcon.jpg" alt="whatsappIcon" height="130" width="130"/>
     </li>
   </ul>
+</div>
 </body>
 </html>
