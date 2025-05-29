@@ -9,7 +9,8 @@
 <style>
     body {
     font-family: Arial, sans-serif;
-    background-color: lavender;
+    background-color: rgb(39, 29, 29);
+    color: lavender;
 }
     .cont{
         display: flex;
@@ -76,6 +77,32 @@ display: inline-flex;
     text-decoration: none;
     padding: 0.3rem 1rem;
 }
+  .card{
+  height: 550px;
+  border-radius: 30px; 
+  padding: 8px 8px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lavender;
+}
+.card:hover{
+border-radius: 30px; 
+padding: 8px 8px;
+margin-left: auto;
+margin-right: auto;
+cursor: grabbing;
+transition: .5s ease;
+transform: translate(5%, 8%);
+-ms-transform: translate(5%, 5%);
+text-align: center;
+text-transform:uppercase;
+text-decoration: overline;
+}
+.cardcontainer{
+    height: 2000px;
+    background-color: rgb(39, 29, 29);
+    color: lavender;
+}
 </style>
 <body>
     <nav class="navbar">
@@ -93,10 +120,88 @@ display: inline-flex;
     </div>
 </div>
 </nav>
-<p>gotta chill, its being taken care of ✌ </p>
-<p>
-    [Project 1]: A brief description of the project and your role.<br>
-    [Project 2]: Another project with a brief description and your role.
-</p>
+   
+
+   <div class="cardcontainer" style="width: 70rem;">
+
+          <div class="card-header">
+            Featured
+           <h4><code>my projects</code></h4><br>
+           </div>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-2 p-3">
+          <div class="col">
+            <div class="card">
+              <video width="320" height="240" autoplay muted controls>
+         <source src="My Game 2025-04-09 16-24-32.mp4" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <h5 class="card-title"><b>Refuse Racer:</b></h5>
+                <p class="card-text">A beginner friendly game with the environmental conservation theme.It was my first game project after learning Unity essentials and C#. I was responsible for the game design, coding, and UI creation.</p>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Cyndi Kendi</small>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <video width="320" height="240" autoplay muted controls>
+         <source src="My project - SampleScene - Windows, Mac, Linux - Unity 6 (6000.0.40f1)_ _DX11_ 2025-04-18 18-57-42.mp4" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <h5 class="card-title"><b>Endless Run</b>(current project under work):</h5>
+                <p class="card-text">A fast-paced endless runner game where players navigate through an obstacle course. I worked on the level design(terrain appearance), character mechanics, and implemented a scoring system and coin collect system.</p>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Cyndi Kendi</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <video width="320" height="240" autoplay muted controls>
+         <source src="RacingCarGame - Track1 - Windows, Mac, Linux - Unity 6 (6000.0.40f1) _DX11_ 2025-05-29 17-12-24.mp4" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <h5 class="card-title"><b>Countryside Racer</b>(current project under work):</h5>
+                <p class="card-text">A racing game set in a countryside environment.My role involved creating the game mechanics, designing the track, and implementing the car physics.I also worked on the UI elements and sound effects to enhance the gaming experience.</p>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Cyndi Kendi</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <video width="320" height="240" autoplay muted controls>
+         <source src="DiceRoll.mp4" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <h5 class="card-title"><b>DiceRoll</b>:</h5>
+                <p class="card-text">A simple dice-rolling game built with React Native. Players can roll a virtual dice and see the result displayed on the screen. I was responsible for the app's design, coding, and testing.</p>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Cyndi Kendi</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <video width="320" height="240" autoplay muted controls>
+         <source src="mockUI.mp4" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <h5 class="card-title"><b>React-native Mock UI</b>(Whatsapp):</h5>
+                <p class="card-text">A mock UI of a Whatsapp application built using React-native. This project showcases my skills in mobile app development and UI design. I was responsible for the layout, navigation, and overall user experience.</p>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Cyndi Kendi</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
 </body>
 </html>
