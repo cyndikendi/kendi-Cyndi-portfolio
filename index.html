@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 <style>
     body {
-    font-family: Arial, sans-serif;
-    background-color: lavender;
-}
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: #f4faff;
+        color: #232946;
+        min-height: 100vh;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Pacifico', cursive;
+        letter-spacing: 1px;
+    }
     .cont{
         display: flex;
         align-items: center;
@@ -18,97 +25,245 @@
         justify-content: space-between;
     }
     .topnavg{
-        font-size: 35;
-    font-weight: bold;
-    margin-right: 5rem;
+        font-size: 35px;
+        font-family: 'Pacifico', cursive;
+        font-weight: bold;
+        margin-right: 5rem;
+        color: #eebbc3;
+        letter-spacing: 2px;
+        text-shadow: 1px 2px 8px #b8c1ec;
     }
     .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 1rem;
-    background-color: #14213d;
-    color: #fff;
-    overflow: scroll;
-}
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 1rem;
+        background: #232946;
+        color: #f4faff;
+        box-shadow: 0 4px 16px rgba(35,41,70,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
     .topnav {
-background-color: #1d2175;
-overflow: hidden;
-}
+        background: #b8c1ec;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.10);
+    }
+    .topnav a {
+        float: left;
+        display: flex;
+        flex: 2;
+        flex-direction: row;
+        color: #232946;
+        text-align: center;
+        padding: 18px 40px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 2rem;
+        background: transparent;
+        transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.05);
+    }
+    .topnav a:hover, .topnav a.active {
+        background: linear-gradient(90deg, #eebbc3 60%, #b8c1ec 100%);
+        color: #232946;
+        font-weight: bold;
+        box-shadow: 0 4px 16px rgba(238,187,195,0.15);
+        transform: scale(1.08) translateY(-2px);
+        text-shadow: 0 1px 4px #fff;
+    }
+    .topnav .icon {
+        display: inline-flex;
+    }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        padding: 0.2rem 1rem;
+    }
+    .nav-links li a {
+        color: #232946;
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 600;
+    }
+    .card {
+        min-height: 550px;
+        border-radius: 30px;
+        padding: 8px 8px;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(135deg, #f4faff 60%, #b8c1ec 100%);
+        color: #232946;
+        box-shadow: 0 8px 32px rgba(35,41,70,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .card:hover {
+        box-shadow: 0 16px 48px rgba(238,187,195,0.25), 0 4px 16px rgba(35,41,70,0.18);
+        cursor: pointer;
+        transform: translateY(-8px) scale(1.03);
+        text-align: center;
+        background: linear-gradient(135deg, #eebbc3 60%, #b8c1ec 100%);
+    }
+    .cardcontainer {
+        min-height: 100vh;
+        background: #f4faff;
+        color: #232946;
+        padding-bottom: 3rem;
+    }
+    .btn-fancy {
+        background: linear-gradient(90deg, #eebbc3 60%, #b8c1ec 100%);
+        color: #232946;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.6rem 1.5rem;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.10);
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    }
+    .btn-fancy:hover {
+        background: linear-gradient(90deg, #b8c1ec 60%, #eebbc3 100%);
+        color: #232946;
+        box-shadow: 0 4px 16px rgba(238,187,195,0.18);
+        transform: scale(1.07) translateY(-2px);
+    }
+    .hero-section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        background: linear-gradient(120deg, #b8c1ec 60%, #eebbc3 100%);
+        overflow: hidden;
+    }
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(35,41,70,0.25);
+    }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 5rem 2rem;
+    }
+    .hero-content img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border: 6px solid #f4faff;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .hero-content h1 {
+        color: #232946;
+        text-shadow: 0 2px 8px #fff;
+    }
+    .hero-content h2 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 1.7rem;
+        color: #232946;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
 
-.topnav a {
-float: left;
-display: flex;
-flex: 2;
-flex-direction: row;
-color: #f2f2f2;
-text-align: center;
-padding: 30px 100px 30px 100px;
-text-decoration: none;
-font-size: 17px;
-border-radius: 40%;
-}
-
-.topnav a:hover {
-background-color: violet;
-color: black ;
-}
-
-.topnav a.active {
-background-color: cadetblue;
-color: white;
-}
-.topnav a.active:hover{
-background-color: rgb(156, 22, 174);
-color: rgb(6, 6, 6);
-}
-.topnav .icon {
-display: inline-flex;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    padding: 0.2rem 1rem;
-}
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.3rem 1rem;
-}
-image{
-    object-fit: cover;
-}
-.card{
-text-align: center;
-border-radius: 40%;
-}
+    @media (max-width: 768px) {
+        .topnavg {
+            font-size: 28px;
+            margin-right: 2rem;
+        }
+        .navbar {
+            flex-direction: column;
+            padding: 0.5rem;
+        }
+        .topnav {
+            width: 100%;
+            border-radius: 1rem;
+        }
+        .topnav a {
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+        .nav-links {
+            flex-direction: column;
+            padding: 0;
+        }
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+        .card {
+            margin: 1rem 0;
+        }
+        .btn-fancy {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .hero-content img {
+            width: 100px;
+            height: 100px;
+            border: 4px solid #f4faff;
+        }
+        .hero-content h1 {
+            font-size: 1.5rem;
+        }
+        .hero-content h2 {
+            font-size: 1.1rem;
+        }
+    }
 </style>
 <body>
-    <nav class="navbar">
-    <div class="cont">
+    <nav class="navbar navbar-expand-lg">
+    <div class="cont container-fluid">
     <div class="topnavg" id="myTopnav">
         <h3><i>kendi_Cyndi</i></h3>
     </div>
     <div class="topnav" id="myTopnav">
-        <ul class="nav-links">
-        <li><a href="index.html" class="active" target="_self"> Home </a></li>
-        <li><a href="aboutPage.html" target="_self"> About </a></li>
-        <li><a href="works.html" target="_self"> Projects </a></li>
-        <li><a href="contacts.html" target="_self"> Contact </a></li>
+        <ul class="nav-links navbar-nav flex-row flex-wrap">
+        <li class="nav-item"><a href="index.html" class="active nav-link" target="_self"> Home </a></li>
+        <li class="nav-item"><a href="aboutPage.html" class="nav-link" target="_self"> About </a></li>
+        <li class="nav-item"><a href="works.html" class="nav-link" target="_self"> Projects </a></li>
+        <li class="nav-item"><a href="contacts.html" class="nav-link" target="_self"> Contact </a></li>
     </ul>
     </div>
 </div>
     </nav>
-    <br>
-    <br>
-<div class="card text-bg-dark">
-    <img src="bgc.jpg" class="card-img" alt="no bgc" height="300">
-    <div class="card-img-overlay">
-      <h5 class="card-title">Welcome mate</h5>
-      <p class="card-text"><h1><b>Hey, am Kendi.<img src="myPic.jpg" alt="Cyndi" height="70px" width="70px" > <br> A web, app and Unity game dev from 🇰🇪 </b></h1></p>
-      <p class="card-text"><small>Wanna Learn More <a href="aboutPage.html">About</a> me?</small></p>
-    </div>
-  </div>
+    <section class="hero-section position-relative d-flex align-items-center justify-content-center" style="min-height: 60vh; background: linear-gradient(120deg, #b8c1ec 60%, #eebbc3 100%); overflow: hidden;">
+      <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(35,41,70,0.25);"></div>
+      <div class="container position-relative z-2 text-center py-5">
+        <img src="myPic.jpg" alt="Cyndi" class="rounded-circle shadow-lg mb-4" style="width: 100px; height: 100px; object-fit: cover; border: 4px solid #f4faff;">
+        <h1 class="display-6 fw-bold mb-2" style="color: #232946; text-shadow: 0 2px 8px #fff; font-size:2rem;">Hey, I'm Kendi</h1>
+        <h2 class="mb-4" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.1rem; color: #232946; font-weight: 600; letter-spacing: 1px;">
+          <span id="typed-text">Web, App & Unity Game Developer from 🇰🇪</span>
+        </h2>
+        <a href="aboutPage.html" class="btn-fancy mt-2">Learn More About Me</a>
+      </div>
+    </section>
+    <script>
+      // Simple typing animation for subtitle
+      const text = "Web, App & Unity Game Developer from 🇰🇪";
+      let i = 0;
+      function type() {
+        if (i <= text.length) {
+          document.getElementById("typed-text").textContent = text.slice(0, i);
+          i++;
+          setTimeout(type, 60);
+        }
+      }
+      type();
+    </script>
 </body>
 </html>

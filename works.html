@@ -2,16 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <title>My Works</title>
 </head>
 <style>
     body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(39, 29, 29);
-    color: lavender;
-}
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: #f4faff;
+        color: #232946;
+        min-height: 100vh;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Pacifico', cursive;
+        letter-spacing: 1px;
+    }
     .cont{
         display: flex;
         align-items: center;
@@ -19,195 +25,203 @@
         justify-content: space-between;
     }
     .topnavg{
-        font-size: 35;
-    font-weight: bold;
-    margin-right: 5rem;
+        font-size: 35px;
+        font-family: 'Pacifico', cursive;
+        font-weight: bold;
+        margin-right: 5rem;
+        color: #eebbc3;
+        letter-spacing: 2px;
+        text-shadow: 1px 2px 8px #b8c1ec;
     }
     .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 1rem;
-    background-color: #14213d;
-    color: #fff;
-    overflow: scroll;
-}
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 1rem;
+        background: #232946;
+        color: #f4faff;
+        box-shadow: 0 4px 16px rgba(35,41,70,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
     .topnav {
-background-color: #1d2175;
-overflow: hidden;
-}
-
-.topnav a {
-float: left;
-display: flex;
-flex: 2;
-flex-direction: row;
-color: #f2f2f2;
-text-align: center;
-padding: 30px 100px 30px 100px;
-text-decoration: none;
-font-size: 17px;
-border-radius: 40%;
-}
-
-.topnav a:hover {
-background-color: violet;
-color: black ;
-}
-
-.topnav a.active {
-background-color: cadetblue;
-color: white;
-}
-.topnav a.active:hover{
-background-color: rgb(156, 22, 174);
-color: rgb(6, 6, 6);
-}
-.topnav .icon {
-display: inline-flex;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    padding: 0.2rem 1rem;
-}
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.3rem 1rem;
-}
-  .card{
-  height: 550px;
-  border-radius: 30px; 
-  padding: 8px 8px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: lavender;
-}
-.card:hover{
-border-radius: 30px; 
-padding: 8px 8px;
-margin-left: auto;
-margin-right: auto;
-cursor: grabbing;
-transition: .5s ease;
-transform: translate(5%, 8%);
--ms-transform: translate(5%, 5%);
-text-align: center;
-text-transform:uppercase;
-text-decoration: overline;
-}
-.cardcontainer{
-    height: 2000px;
-    background-color: rgb(39, 29, 29);
-    color: lavender;
-}
+        background: #b8c1ec;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.10);
+    }
+    .topnav a {
+        float: left;
+        display: flex;
+        flex: 2;
+        flex-direction: row;
+        color: #232946;
+        text-align: center;
+        padding: 18px 40px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 2rem;
+        background: transparent;
+        transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.05);
+    }
+    .topnav a:hover, .topnav a.active {
+        background: linear-gradient(90deg, #eebbc3 60%, #b8c1ec 100%);
+        color: #232946;
+        font-weight: bold;
+        box-shadow: 0 4px 16px rgba(238,187,195,0.15);
+        transform: scale(1.08) translateY(-2px);
+        text-shadow: 0 1px 4px #fff;
+    }
+    .topnav .icon {
+        display: inline-flex;
+    }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        padding: 0.2rem 1rem;
+    }
+    .nav-links li a {
+        color: #232946;
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 600;
+    }
+    .card {
+        min-height: 550px;
+        border-radius: 30px;
+        padding: 8px 8px;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(135deg, #f4faff 60%, #b8c1ec 100%);
+        color: #232946;
+        box-shadow: 0 8px 32px rgba(35,41,70,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .card:hover {
+        box-shadow: 0 16px 48px rgba(238,187,195,0.25), 0 4px 16px rgba(35,41,70,0.18);
+        cursor: pointer;
+        transform: translateY(-8px) scale(1.03);
+        text-align: center;
+        background: linear-gradient(135deg, #eebbc3 60%, #b8c1ec 100%);
+    }
+    .cardcontainer {
+        min-height: 100vh;
+        background: #f4faff;
+        color: #232946;
+        padding-bottom: 3rem;
+    }
+    /* Fancy button styles for card actions */
+    .btn-fancy {
+        background: linear-gradient(90deg, #eebbc3 60%, #b8c1ec 100%);
+        color: #232946;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.6rem 1.5rem;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.10);
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    }
+    .btn-fancy:hover {
+        background: linear-gradient(90deg, #b8c1ec 60%, #eebbc3 100%);
+        color: #232946;
+        box-shadow: 0 4px 16px rgba(238,187,195,0.18);
+        transform: scale(1.07) translateY(-2px);
+    }
 </style>
 <body>
-    <nav class="navbar">
-    <div class="cont">
-    <div class="topnavg" id="myTopnav">
-        <h3><i>kendi_Cyndi</i></h3>
-    </div>
-    <div class="topnav" id="myTopnav">
-        <ul class="nav-links">
-        <li><a href="index.html" target="_self"> Home </a></li>
-        <li><a href="aboutPage.html" target="_self"> About </a></li>
-        <li><a href="works.html" class="active" target="_self"> Projects </a></li>
-        <li><a href="contacts.html" target="_self"> Contact </a></li>
-    </ul>
-    </div>
-</div>
-</nav>
-   
-
-   <div class="cardcontainer" style="width: 70rem;">
-
-          <div class="card-header">
-            Featured
-           <h4><code>my projects(including this website)</code></h4><br>
-           </div>
-        <br>
-        <div class="row row-cols-1 row-cols-md-3 g-2 p-3">
-          <div class="col">
-            <div class="card">
-              <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1089227017?h=5b431a4182&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="My Game 2025-04-09 16-24-32"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-              <div class="card-body">
-                <h5 class="card-title"><b>Refuse Racer:</b></h5>
-                <p class="card-text">A beginner friendly game with the environmental conservation theme.It was my first game project after learning Unity essentials and C#. I was responsible for the game design, coding, and UI creation.</p>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Cyndi Kendi</small>
-                </div>
-              </div> 
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div style="padding:50.63% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1089225290?h=3f0902ddd8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="My project - SampleScene - Windows, Mac, Linux - Unity 6 (6000.0.40f1)_ _DX11_ 2025-04-18 18-57-42"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-              <div class="card-body">
-                <h5 class="card-title"><b>Endless Run</b>(current project under work):</h5>
-                <p class="card-text">A fast-paced endless runner game where players navigate through an obstacle course. I worked on the level design(terrain appearance), character mechanics, and implemented a scoring system and coin collect system.</p>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Cyndi Kendi</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div style="padding:50.63% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1093242997?h=5a6697712f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="RacingCarGame - Main Menu - Windows, Mac, Linux - Unity 6 (6000.0.40f1) _DX11_ 2025-06-14 00-20-46"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-              <div class="card-body">
-                <h5 class="card-title"><b>Countryside Racer</b>(current project under work):</h5>
-                <p class="card-text">A racing game set in a countryside environment.My role involved creating the game mechanics, designing the track, and implementing the car physics.I also worked on the UI elements and sound effects to enhance the gaming experience.</p>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Cyndi Kendi</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=drdcsg5kj&public_id=cib0xugsmtmqaloiulvn&profile=cld-default"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
-              <div class="card-body">
-                <h5 class="card-title"><b>DiceRoll</b>:</h5>
-                <p class="card-text">A simple dice-rolling game built with React Native. Players can roll a virtual dice and see the result displayed on the screen. I was responsible for the app's design, coding, and testing.</p>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Cyndi Kendi</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=drdcsg5kj&public_id=o1rek1dmpbx7nrpjbzio&profile=cld-default"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
-              <div class="card-body">
-                <h5 class="card-title"><b>React-native Mock UI</b>(Whatsapp):</h5>
-                <p class="card-text">A mock UI of a Whatsapp application built using React-native. This project showcases my skills in mobile app development and UI design. I was responsible for the layout, navigation, and overall user experience.</p>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Cyndi Kendi</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+    <nav class="navbar navbar-expand-lg">
+      <div class="cont container-fluid">
+        <div class="topnavg" id="myTopnav">
+            <h3><i>kendi_Cyndi</i></h3>
         </div>
+        <div class="topnav" id="myTopnav">
+            <ul class="nav-links navbar-nav flex-row flex-wrap">
+                <li class="nav-item"><a href="index.html" class="nav-link" target="_self"> Home </a></li>
+                <li class="nav-item"><a href="aboutPage.html" class="nav-link" target="_self"> About </a></li>
+                <li class="nav-item"><a href="works.html" class="active nav-link" target="_self"> Projects </a></li>
+                <li class="nav-item"><a href="contacts.html" class="nav-link" target="_self"> Contact </a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-4">
+  <div class="card-header bg-gradient p-3 mb-3 text-center" style="border-radius: 1.2rem; background: linear-gradient(90deg, #6a82fb 60%, #f7971e 100%); color: #3a5ca8; box-shadow: 0 2px 8px rgba(106,130,251,0.15);">
+    <h2 class="fw-bold mb-1" style="font-size:1.3rem;">Featured Projects</h2>
+    <h5 class="mb-0" style="font-size:0.95rem;"><code>my projects (including this website)</code></h5>
+  </div>
+  <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card mx-auto w-100" style="max-width: 400px; min-width: 0; min-height: 370px; height: 370px;">
+          <div class="ratio ratio-16x9"><iframe src="https://player.vimeo.com/video/1089227017?h=5b431a4182&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="border-radius:14px;" title="My Game 2025-04-09 16-24-32"></iframe></div>
+          <div class="card-body p-2">
+            <h6 class="card-title"><b>Refuse Racer:</b></h6>
+            <p class="card-text" style="font-size:0.93rem;">A beginner friendly game with the environmental conservation theme. My first game project after learning Unity essentials and C#. I was responsible for the game design, coding, and UI creation.</p>
+            <div class="card-footer p-1"><small class="text-body-secondary">Cyndi Kendi</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card mx-auto w-100" style="max-width: 400px; min-width: 0; min-height: 370px; height: 370px;">
+          <div class="ratio ratio-16x9"><iframe src="https://player.vimeo.com/video/1089225290?h=3f0902ddd8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="border-radius:14px;" title="Endless Run"></iframe></div>
+          <div class="card-body p-2">
+            <h6 class="card-title"><b>Endless Run</b> (current project under work):</h6>
+            <p class="card-text" style="font-size:0.93rem;">A fast-paced endless runner game where players navigate through an obstacle course. I worked on the level design, character mechanics, and implemented a scoring and coin collect system.</p>
+            <div class="card-footer p-1"><small class="text-body-secondary">Cyndi Kendi</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card mx-auto w-100" style="max-width: 400px; min-width: 0; min-height: 370px; height: 370px;">
+          <div class="ratio ratio-16x9"><iframe src="https://player.vimeo.com/video/1093242997?h=5a6697712f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="border-radius:14px;" title="Countryside Racer"></iframe></div>
+          <div class="card-body p-2">
+            <h6 class="card-title"><b>Countryside Racer</b> (current project under work):</h6>
+            <p class="card-text" style="font-size:0.93rem;">A racing game set in a countryside environment. My role involved creating the game mechanics, designing the track, and implementing the car physics, UI elements, and sound effects.</p>
+            <div class="card-footer p-1"><small class="text-body-secondary">Cyndi Kendi</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card mx-auto w-100" style="max-width: 400px; min-width: 0; min-height: 370px; height: 370px;">
+          <div class="ratio ratio-16x9"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drdcsg5kj&public_id=cib0xugsmtmqaloiulvn&profile=cld-default" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="border-radius:14px;"></iframe></div>
+          <div class="card-body p-2">
+            <h6 class="card-title"><b>DiceRoll</b>:</h6>
+            <p class="card-text" style="font-size:0.93rem;">A simple dice-rolling game built with React Native. Players can roll a virtual dice and see the result displayed on the screen. I was responsible for the app's design, coding, and testing.</p>
+            <div class="card-footer p-1"><small class="text-body-secondary">Cyndi Kendi</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card mx-auto w-100" style="max-width: 400px; min-width: 0; min-height: 370px; height: 370px;">
+          <div class="ratio ratio-16x9"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drdcsg5kj&public_id=o1rek1dmpbx7nrpjbzio&profile=cld-default" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="border-radius:14px;"></iframe></div>
+          <div class="card-body p-2">
+            <h6 class="card-title"><b>React-native Mock UI</b> (Whatsapp):</h6>
+            <p class="card-text" style="font-size:0.93rem;">A mock UI of a Whatsapp application built using React-native. This project showcases my skills in mobile app development and UI design. I was responsible for the layout, navigation, and overall user experience.</p>
+            <div class="card-footer p-1"><small class="text-body-secondary">Cyndi Kendi</small></div>
+          </div>
+        </div>
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

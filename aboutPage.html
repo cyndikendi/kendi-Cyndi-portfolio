@@ -2,130 +2,270 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <title>About me</title>
 </head>
 <style>
     body {
-    font-family: Arial, sans-serif;
-    background-color: lavender;
-    font-weight: 500;
-    font-size: large;
-}
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: #f4faff;
+        color: #232946;
+        min-height: 100vh;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Pacifico', cursive;
+        letter-spacing: 1px;
+    }
     .cont{
         display: flex;
         align-items: center;
         padding: 1rem 2rem;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .topnavg{
-        font-size: 35;
-    font-weight: bold;
-    margin-right: 5rem;
+        font-size: 35px;
+        font-family: 'Pacifico', cursive;
+        font-weight: bold;
+        margin-right: 5rem;
+        color: #eebbc3;
+        letter-spacing: 2px;
+        text-shadow: 1px 2px 8px #b8c1ec;
     }
     .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 1rem;
-    background-color: #14213d;
-    color: #fff;
-    overflow: scroll;
-}
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 1rem;
+        background: #232946;
+        color: #f4faff;
+        box-shadow: 0 4px 16px rgba(35,41,70,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
     .topnav {
-background-color: #1d2175;
-overflow: hidden;
-}
-
-.topnav a {
-float: left;
-display: flex;
-flex: 2;
-flex-direction: row;
-color: #f2f2f2;
-text-align: center;
-padding: 30px 100px 30px 100px;
-text-decoration: none;
-font-size: 17px;
-border-radius: 40%;
-}
-
-.topnav a:hover {
-background-color: violet;
-color: black ;
-}
-
-.topnav a.active {
-background-color: cadetblue;
-color: white;
-}
-.topnav a.active:hover{
-background-color: rgb(156, 22, 174);
-color: rgb(6, 6, 6);
-}
-.topnav .icon {
-display: inline-flex;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    padding: 0.2rem 1rem;
-}
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.3rem 1rem;
-}
+        background: #b8c1ec;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.10);
+    }
+    .topnav a {
+        float: left;
+        display: flex;
+        flex: 2;
+        flex-direction: row;
+        color: #232946;
+        text-align: center;
+        padding: 18px 40px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 2rem;
+        background: transparent;
+        transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.05);
+    }
+    .topnav a:hover, .topnav a.active {
+        background: linear-gradient(90deg, #eebbc3 60%, #b8c1ec 100%);
+        color: #232946;
+        font-weight: bold;
+        box-shadow: 0 4px 16px rgba(238,187,195,0.15);
+        transform: scale(1.08) translateY(-2px);
+        text-shadow: 0 1px 4px #fff;
+    }
+    .topnav .icon {
+        display: inline-flex;
+    }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        padding: 0.2rem 1rem;
+    }
+    .nav-links li a {
+        color: #232946;
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 600;
+    }
+    .card {
+        min-height: 550px;
+        border-radius: 30px;
+        padding: 8px 8px;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(135deg, #f4faff 60%, #b8c1ec 100%);
+        color: #232946;
+        box-shadow: 0 8px 32px rgba(35,41,70,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .card:hover {
+        box-shadow: 0 16px 48px rgba(238,187,195,0.25), 0 4px 16px rgba(35,41,70,0.18);
+        cursor: pointer;
+        transform: translateY(-8px) scale(1.03);
+        text-align: center;
+        background: linear-gradient(135deg, #eebbc3 60%, #b8c1ec 100%);
+    }
+    .cardcontainer {
+        min-height: 100vh;
+        background: #f4faff;
+        color: #232946;
+        padding-bottom: 3rem;
+    }
+    .btn-fancy {
+        background: linear-gradient(90deg, #eebbc3 60%, #b8c1ec 100%);
+        color: #232946;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.6rem 1.5rem;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.10);
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    }
+    .btn-fancy:hover {
+        background: linear-gradient(90deg, #b8c1ec 60%, #eebbc3 100%);
+        color: #232946;
+        box-shadow: 0 4px 16px rgba(238,187,195,0.18);
+        transform: scale(1.07) translateY(-2px);
+    }
+    .about-hero {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        padding: 4rem 2rem;
+        color: #f4faff;
+    }
+    .about-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(35, 41, 70, 0.7);
+        z-index: 1;
+        border-radius: 1.5rem;
+    }
+    .about-hero img {
+        border: 5px solid #f4faff;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        z-index: 2;
+        position: relative;
+    }
+    .about-hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        z-index: 2;
+        position: relative;
+    }
+    .about-hero h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        z-index: 2;
+        position: relative;
+    }
+    .about-hero p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        z-index: 2;
+        position: relative;
+    }
+    .info-card {
+        background: #f4faff;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(35,41,70,0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 32px rgba(35,41,70,0.20);
+    }
+    .info-card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: #232946;
+    }
+    .info-card p {
+        font-size: 1rem;
+        color: #555;
+    }
+    .icon {
+        font-size: 2rem;
+        color: #eebbc3;
+        margin-bottom: 1rem;
+    }
 </style>
 <body>
-    <nav class="navbar">
-    <div class="cont">
+    <nav class="navbar navbar-expand-lg">
+    <div class="cont container-fluid">
     <div class="topnavg" id="myTopnav">
         <h3><i>kendi_Cyndi</i></h3>
     </div>
     <div class="topnav" id="myTopnav">
-        <ul class="nav-links">
-        <li><a href="index.html" target="_self"> Home </a></li>
-        <li><a href="aboutPage.html" class="active" target="_self"> About </a></li>
-        <li><a href="works.html" target="_self"> Projects </a></li>
-        <li><a href="contacts.html" target="_self"> Contact </a></li>
+        <ul class="nav-links navbar-nav flex-row flex-wrap">
+        <li class="nav-item"><a href="index.html" class="nav-link" target="_self"> Home </a></li>
+        <li class="nav-item"><a href="aboutPage.html" class="active nav-link" target="_self"> About </a></li>
+        <li class="nav-item"><a href="works.html" class="nav-link" target="_self"> Projects </a></li>
+        <li class="nav-item"><a href="contacts.html" class="nav-link" target="_self"> Contact </a></li>
     </ul>
     </div>
 </div>
-</nav>
-<p>Hi, I'm <code>Cyndi Kendi</code>, a web and android developer.
-     I have a passion in creating innovative web designs and a knack for problem-solving during making android apps. 
-    With a solid foundation in React-native, Javascript, CSS and HTML, 
-    I have developed a range of applications from calculators, to ToDolist apps, password generators, currencyConverter app, to simple games like rolling the dice. I am majorly specialized in Unity game dev. </p>
-    <br>
-    <p>
-        <u><b>Professional Background</b></u><br>
-    With 3 years of experience in the industry, I have worked on a couple of projects as shown in my projects page.  
-    My expertise lies in Unity 3D game dev.
-    </p>
-    <br>
-    <p>
-        <u><b>Education and Certifications</b></u><br>
-    I am currently pursuing a Bachelor's degree in Computer Science from Pwani University, and I have completed my highschool and Primary school certifications.
-    </p>
-    <br>
-    <p>
-        <u><b>Personal Interests</b></u><br>
-    When I'm not coding, you can find me trying new recipes, listening to music, watching movies or swimming.
-    I am into skating and riding bicycles a lot but unfortunately I can't skate lol.
-    </p>
-    <br>
-    <p>
-        <u><b>Projects and Achievements</b></u><br>
-Some of my notable projects are described in my Projects page.
-would you love to view them,,,? I would appreciate
-    </p>
-    <br>
-    <p>
-        <u><b>Get in Touch</b></u><br>
-    Feel free to reach out to me at my email or connect with me on LinkedIn and my social media platforms found on the <a href="contacts.html">Contact</a> page.
-    </p>
+    </nav>
+<section class="about-hero text-center py-4" style="background: linear-gradient(120deg, #b8c1ec 60%, #eebbc3 100%);">
+    <div class="container">
+        <img src="myPic.jpg" alt="Cyndi" class="rounded-circle shadow-lg mb-3" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #f4faff;">
+        <h1 class="display-6 fw-bold mb-1" style="color: #232946; font-size:1.5rem;">Cyndi Kendi</h1>
+        <h2 class="mb-3" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.1rem; color: #232946; font-weight: 600; letter-spacing: 1px;">Web, App & Unity Game Developer</h2>
+        <p class="lead" style="color: #232946; font-size:1rem;">Passionate about creative design, problem-solving, and building fun digital experiences.</p>
+        <a href="contacts.html" class="btn-fancy btn-sm mt-2">Contact Me</a>
+    </div>
+</section>
+<div class="container py-4">
+  <div class="row g-3">
+    <div class="col-12 col-md-6">
+      <div class="card p-3 h-100 border-0 shadow-sm">
+        <h4 class="mb-2" style="font-size:1.1rem;"><span style="font-size:1.2rem;">💼</span> Professional Background</h4>
+        <p class="mb-0" style="font-size:0.98rem;">With 3 years of experience, I have worked on a variety of projects (see <a href="works.html">Projects</a> page). My expertise lies in Unity 3D game development, web, and mobile apps.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="card p-3 h-100 border-0 shadow-sm">
+        <h4 class="mb-2" style="font-size:1.1rem;"><span style="font-size:1.2rem;">🎓</span> Education & Certifications</h4>
+        <p class="mb-0" style="font-size:0.98rem;">Currently pursuing a Bachelor's in Computer Science at Pwani University. Completed high school and primary certifications.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="card p-3 h-100 border-0 shadow-sm">
+        <h4 class="mb-2" style="font-size:1.1rem;"><span style="font-size:1.2rem;">🌱</span> Personal Interests</h4>
+        <p class="mb-0" style="font-size:0.98rem;">When not coding, I enjoy trying new recipes, music, movies, swimming, skating, and cycling (though I can't skate yet!).</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="card p-3 h-100 border-0 shadow-sm">
+        <h4 class="mb-2" style="font-size:1.1rem;"><span style="font-size:1.2rem;">🏆</span> Projects & Achievements</h4>
+        <p class="mb-0" style="font-size:0.98rem;">Some of my notable projects are described on my <a href="works.html">Projects</a> page. Would you love to view them? I would appreciate it!</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="contacts.html" class="btn-fancy btn-sm">Get in Touch</a>
+  </div>
+</div>
 </body>
 </html>
