@@ -8,6 +8,28 @@
     <title>My Works</title>
 </head>
 <style>
+    /* Make carousel side buttons more visible */
+    .carousel-control-prev, .carousel-control-next {
+        width: 48px;
+        height: 48px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(35,41,70,0.85);
+        border-radius: 50%;
+        border: 2px solid #eebbc3;
+        box-shadow: 0 2px 8px rgba(35,41,70,0.18);
+        opacity: 1 !important;
+        transition: background 0.2s, border 0.2s;
+    }
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+        background: #eebbc3;
+        border-color: #232946;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        filter: invert(1) brightness(2) drop-shadow(0 0 2px #fff);
+        width: 2rem;
+        height: 2rem;
+    }
     body {
         font-family: 'Montserrat', Arial, sans-serif;
         background: #f4faff;
